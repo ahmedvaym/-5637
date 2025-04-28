@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veshi Rahkau Opperation</title>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Date Range Picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker@3.1.0/daterangepicker.min.js"></script>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <h1>Veshi Rahkau Opperation</h1>
+            </div>
+        </header>
+
+        <div class="form-container">
+            <div class="modal-tabs">
+                <button class="modal-tab active" data-tab="operation-tab">Operation Entry</button>
+                <button class="modal-tab" data-tab="statistics-tab">Statistics Entry</button>
+            </div>
+            
+            <!-- Operation Form -->
+            <div class="tab-content active" id="operation-tab">
+                <form id="operation-form">
+                    <div class="form-group date-picker-container">
+                        <label for="operation-date">Date</label>
+                        <input type="text" id="operation-date" class="form-control date-picker" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="operation-name">Operation Name</label>
+                        <input type="text" id="operation-name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="operation-location">Location</label>
+                        <input type="text" id="operation-location" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="operation-details">Details</label>
+                        <textarea id="operation-details" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="operation-city">City</label>
+                        <select id="operation-city" class="form-control" required>
+                            <option value="">Select City</option>
+                            <option value="Addu City">Addu City</option>
+                            <option value="Fuvamulak City">Fuvamulak City</option>
+                            <option value="Thinadhoo City">Thinadhoo City</option>
+                            <option value="Gdh.Gadhoo">Gdh.Gadhoo</option>
+                            <option value="Ga.Villigili">Ga.Villigili</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Save Operation</button>
+                </form>
+                <div class="success-message" id="operation-success">
+                    Operation added successfully!
+                </div>
+            </div>
+            
+            <!-- Statistics Form -->
+            <div class="tab-content" id="statistics-tab">
+                <form id="statistics-form">
+                    <div class="form-group date-picker-container">
+                        <label for="statistics-date">Date</label>
+                        <input type="text" id="statistics-date" class="form-control date-picker" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="statistics-city">City</label>
+                        <select id="statistics-city" class="form-control" required>
+                            <option value="">Select City</option>
+                            <option value="Addu City">Addu City</option>
+                            <option value="Fuvamulak City">Fuvamulak City</option>
+                            <option value="Thinadhoo City">Thinadhoo City</option>
+                            <option value="Gdh.Gadhoo">Gdh.Gadhoo</option>
+                            <option value="Ga.Villigili">Ga.Villigili</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="location-check">Location Checks</label>
+                        <input type="number" id="location-check" class="form-control" min="0" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="interaction">Interactions</label>
+                        <input type="number" id="interaction" class="form-control" min="0" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="arrest">Arrests</label>
+                        <input type="number" id="arrest" class="form-control" min="0" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="detention">Detentions</label>
+                        <input type="number" id="detention" class="form-control" min="0" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicle-check">Vehicle Checks</label>
+                        <input type="number" id="vehicle-check" class="form-control" min="0" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tow-vehicles">Tow Vehicles</label>
+                        <input type="number" id="tow-vehicles" class="form-control" min="0" value="0" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Save Statistics</button>
+                </form>
+                <div class="success-message" id="statistics-success">
+                    Statistics added successfully!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>

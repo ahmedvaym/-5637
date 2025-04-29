@@ -1,15 +1,16 @@
 
 
  // Firebase configuration
- const firebaseConfig = {
-    apiKey: "AIzaSyC7GeP3yxb0UJIPmE6e-PeA5V3CTK0mevc",
-    authDomain: "gangsgallery.firebaseapp.com",
-    databaseURL: "https://gangsgallery-default-rtdb.firebaseio.com",
-    projectId: "gangsgallery",
-    storageBucket: "gangsgallery.appspot.com",
-    messagingSenderId: "622725528053",
-    appId: "1:622725528053:web:cf27dab0632c51914208bc",
-    measurementId: "G-3BWT2GWFZR"
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCqdg6ePdCGvlzHpaEFgOUFPaHEsPYIApw",
+  authDomain: "operationinterectiondata.firebaseapp.com",
+  databaseURL: "https://operationinterectiondata-default-rtdb.firebaseio.com",
+  projectId: "operationinterectiondata",
+  storageBucket: "operationinterectiondata.firebasestorage.app",
+  messagingSenderId: "211887231593",
+  appId: "1:211887231593:web:aac4253ab20803876348f8",
+  measurementId: "G-HSL5TF5FTB"
 };
 
 // Initialize Firebase
